@@ -21,7 +21,7 @@ int fitness(Individual individual, Individual target);
 void selection(Individual population[], Individual target_male, Individual target_female, Individual males[], Individual females[]);
 
 void generate_initial_population(Individual population[]) {
-    const char* names[] = {"Person1", "Person2", "Person3", /* ... up to 50 */};
+    const char* names[] = {"Person1", "Person2", "Person3","Person4", "Person5", "Person6","Person7", "Person8", "Person9","Person10", "Person11", "Person12","Person13", "Person14", "Person15","Person16", "Person17", "Person18","Person19", "Person20", "Person21","Person22", "Person23", "Person24","Person25", "Person26", "Person27","Person28", "Person29", "Person30","Person31", "Person32", "Person33","Person34", "Person35", "Person36","Person37", "Person38","Person39", "Person40", "Person41","Person42", "Person43", "Person44","Person45", "Person46", "Person47","Person48", "Person49", "Person50", /* ... up to 50 */};
     const char* genders[] = {"Male", "Female"};
     const char* hair_colors[] = {"Blonde", "Black", "Brown", "Red"};
     const char* eye_colors[] = {"Blue", "Brown", "Green", "Hazel"};
