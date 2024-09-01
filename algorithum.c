@@ -23,18 +23,18 @@ void selection(Individual population[], Individual target_male, Individual targe
 void generate_initial_population(Individual population[]) {
     const char* names[] = {"Person1", "Person2", "Person3","Person4", "Person5", "Person6","Person7", "Person8", "Person9","Person10", "Person11", "Person12","Person13", "Person14", "Person15","Person16", "Person17", "Person18","Person19", "Person20", "Person21","Person22", "Person23", "Person24","Person25", "Person26", "Person27","Person28", "Person29", "Person30","Person31", "Person32", "Person33","Person34", "Person35", "Person36","Person37", "Person38","Person39", "Person40", "Person41","Person42", "Person43", "Person44","Person45", "Person46", "Person47","Person48", "Person49", "Person50", /* ... up to 50 */};
     const char* genders[] = {"Male", "Female"};
-    const char* hair_colors[] = {"Blonde", "Black", "Brown", "Red"};
-    const char* eye_colors[] = {"Blue", "Brown", "Green", "Hazel"};
-    const char* ear_lobes[] = {"Attached", "Detached"};
-    const char* heights[] = {"Tall", "Short"};
+    const char* hair_colors[] = {"Black", "Brown",};
+    const char* eye_colors[] = {"Black", "Brown",};
+    const char* ear_lobes[] = {"Detached"};
+    const char* heights[] = {"Tall"};
 
     for (int i = 0; i < POPULATION_SIZE; i++) {
         strcpy(population[i].name, names[i % (sizeof(names) / sizeof(names[0]))]);
         strcpy(population[i].gender, genders[rand() % 2]);
-        strcpy(population[i].hair_color, hair_colors[rand() % 4]);
-        strcpy(population[i].eye_color, eye_colors[rand() % 4]);
-        strcpy(population[i].ear_lobe, ear_lobes[rand() % 2]);
-        strcpy(population[i].height, heights[rand() % 2]);
+        strcpy(population[i].hair_color, hair_colors[rand() % 2]);
+        strcpy(population[i].eye_color, eye_colors[rand() % 2]);
+        strcpy(population[i].ear_lobe, ear_lobes[rand() % 1]);
+        strcpy(population[i].height, heights[rand() % 1]);
     }
 }
 
@@ -75,8 +75,8 @@ int main() {
     Individual selected_females[SELECTION_SIZE_FEMALE];
 
     // Target individuals for males and females
-    Individual target_male = {"", "Male", "Blonde", "Blue", "Attached", "Tall"};
-    Individual target_female = {"", "Female", "Blonde", "Blue", "Detached", "Tall"};
+    Individual target_male = {"", "Male", "Black", "Black", "Detached", "Tall"};
+    Individual target_female = {"", "Female", "Black", "Black", "Detached", "Short"};
 
     // Generate initial population
     generate_initial_population(population);
